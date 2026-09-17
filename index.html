@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Invites / Doorway Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .resource-footer{border-top:1px solid var(--line);max-width:1440px;margin:0 auto;padding:22px 4vw 30px;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font:10px 'DM Mono',monospace;letter-spacing:.06em}
+    .resource-footer nav{display:flex;flex-wrap:wrap;gap:18px}
+    .resource-footer a{color:var(--teal);text-decoration:none}
+    .resource-footer a:hover{text-decoration:underline}
+    @media(max-width:800px){.resource-footer{padding-left:5vw;padding-right:5vw;display:block}.resource-footer nav{margin-top:14px;gap:12px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">RI</span><span>Robot Invites</span></div>
+    <div class="status"><span class="status-dot"></span><span id="connection">connecting</span><span class="divider">/</span><span id="clock">T+ 00:00</span></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">DOORWAY LAB / 01</p><h1>How punctual is<br><em>too punctual?</em></h1></div>
+      <p class="lede">A live overhead model of robots arriving for one very popular party. Watch the queue meet its bottleneck.</p>
+    </section>
+    <nav class="tabs" aria-label="Solution ideas">
+      <button class="tab active" data-tab="door">01 <span>One door</span></button>
+      <button class="tab" data-tab="doors">02 <span>More doors</span></button>
+      <button class="tab" data-tab="size">03 <span>Bigger door</span></button>
+      <button class="tab" data-tab="schedule">04 <span>Invite timing</span></button>
+      <button class="tab" data-tab="personality">05 <span>Robot personality</span></button>
+      <button class="tab" data-tab="infinite">06 <span>At the limit</span></button>
+    </nav>
+    <section class="workspace">
+      <div class="stage-wrap">
+        <div class="stage-heading"><span id="scenario-label">ONE DOOR / ORDERLY QUEUE</span><span class="legend"><i class="swatch outside"></i> waiting <i class="swatch inside"></i> inside</span></div>
+        <div class="controls"><button id="play" class="primary">▶ <span>Run</span></button><button id="step">Step</button><button id="reset">Reset</button><label>speed <input id="speed" type="range" min="0.1" max="2" value="1" step="0.1"></label></div>
+        <div id="canvas-holder" aria-label="3D overhead robot doorway simulation"></div>
+      </div>
+      <aside class="dashboard">
+        <div class="dash-head"><span>LIVE READOUT</span><span id="event">reset</span></div>
+        <div class="metric-grid">
+          <div class="metric"><span>Throughput</span><strong id="throughput">0.0</strong><small>robots / min</small></div>
+          <div class="metric"><span>Average wait</span><strong id="average-wait">0.0</strong><small>seconds</small></div>
+          <div class="metric"><span>Door utilization</span><strong id="utilization">0%</strong><small>of invite list</small></div>
+          <div class="metric"><span>Queue now</span><strong id="queue">0</strong><small>robots waiting</small></div>
+        </div>
+        <div class="chart-block"><div class="dash-head"><span>QUEUE PRESSURE</span><span>LIVE</span></div><div id="chart"></div></div>
+        <div class="notes"><p class="eyebrow">OBJECTIVE 05</p><p id="scenario-note">Baseline: every robot is the same size, arrives in order, and waits its turn. The door is three robots wide.</p></div>
+        <a class="download" href="/api/log" target="_blank">↗ View raw JSONL-ready log</a>
+      </aside>
+    </section>
+  </main>
+  <footer class="resource-footer">
+    <span>ROBOT INVITES / RESEARCH DEMO</span>
+    <nav aria-label="Project resources">
+      <a href="manuscript/manuscript.pdf">Manuscript PDF</a>
+    </nav>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="./sketch.js"></script>
+</body>
+</html>

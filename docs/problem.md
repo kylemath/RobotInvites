@@ -1,0 +1,1 @@
+You are inviting robots to a party and worried that if you invite them to come at 9 pm they will all be so punctual that they squeeze into the door and no one can go to your party. We want to find useful solutions either in robot design or party planning (house design), or in invitiation planning to solve this problem. 

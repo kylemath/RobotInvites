@@ -1,0 +1,11 @@
+{
+  "id": "RobotInvites",
+  "title": "RobotInvites",
+  "oneLiner": "How do we invite these robots to a party?",
+  "demoUrl": "https://kylemath.github.io/RobotInvites",
+  "screenshot": "https://raw.githubusercontent.com/kylemath/RobotInvites/main/screenshot.png",
+  "kind": "project",
+  "categories": ["robots", "ai", "coding"],
+  "tags": ["robots", "ai", "coding"],
+  "status": "published"
+}

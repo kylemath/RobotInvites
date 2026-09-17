@@ -1,0 +1,1205 @@
+{
+  "repetitions": 20,
+  "scenarios": [
+    {
+      "name": "One door",
+      "description": "Baseline: 30 robots, one 3-robot-wide door",
+      "settings": {
+        "robot_count": 30,
+        "door_width": 3,
+        "extra_doors": 0,
+        "variability": 0,
+        "arrival_pattern": "surge"
+      },
+      "summary": {
+        "completion_time": 2.5,
+        "throughput": 720.0,
+        "average_wait": 1.375,
+        "max_wait": 2.5,
+        "peak_queue": 27
+      },
+      "runs": [
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 2.5,
+          "throughput": 720.0,
+          "average_wait": 1.375,
+          "max_wait": 2.5,
+          "peak_queue": 27
+        }
+      ]
+    },
+    {
+      "name": "More doors",
+      "description": "30 robots, two 3-robot-wide doors",
+      "settings": {
+        "robot_count": 30,
+        "door_width": 3,
+        "extra_doors": 1,
+        "variability": 0,
+        "arrival_pattern": "surge"
+      },
+      "summary": {
+        "completion_time": 1.25,
+        "throughput": 1440.0,
+        "average_wait": 0.75,
+        "max_wait": 1.25,
+        "peak_queue": 24
+      },
+      "runs": [
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        },
+        {
+          "robots": 30,
+          "capacity": 6,
+          "completion_time": 1.25,
+          "throughput": 1440.0,
+          "average_wait": 0.75,
+          "max_wait": 1.25,
+          "peak_queue": 24
+        }
+      ]
+    },
+    {
+      "name": "Bigger door",
+      "description": "30 robots, one 5-robot-wide door",
+      "settings": {
+        "robot_count": 30,
+        "door_width": 5,
+        "extra_doors": 0,
+        "variability": 0,
+        "arrival_pattern": "surge"
+      },
+      "summary": {
+        "completion_time": 1.5,
+        "throughput": 1200.0,
+        "average_wait": 0.875,
+        "max_wait": 1.5,
+        "peak_queue": 25
+      },
+      "runs": [
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        },
+        {
+          "robots": 30,
+          "capacity": 5,
+          "completion_time": 1.5,
+          "throughput": 1200.0,
+          "average_wait": 0.875,
+          "max_wait": 1.5,
+          "peak_queue": 25
+        }
+      ]
+    },
+    {
+      "name": "Invite timing",
+      "description": "30 robots scheduled across a seven-second arrival window",
+      "settings": {
+        "robot_count": 30,
+        "door_width": 3,
+        "extra_doors": 0,
+        "variability": 0,
+        "arrival_pattern": "scheduled"
+      },
+      "summary": {
+        "completion_time": 7.0,
+        "throughput": 257.1428571428571,
+        "average_wait": 0.12500000000000003,
+        "max_wait": 0.25,
+        "peak_queue": 0
+      },
+      "runs": [
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 7.0,
+          "throughput": 257.1428571428571,
+          "average_wait": 0.12500000000000003,
+          "max_wait": 0.25,
+          "peak_queue": 0
+        }
+      ]
+    },
+    {
+      "name": "Robot personality",
+      "description": "30 robots with moderate random arrival variation",
+      "settings": {
+        "robot_count": 30,
+        "door_width": 3,
+        "extra_doors": 0,
+        "variability": 0,
+        "arrival_pattern": "personality"
+      },
+      "summary": {
+        "completion_time": 3.6375,
+        "throughput": 495.85714285714283,
+        "average_wait": 0.18265543234064763,
+        "max_wait": 0.7222667773339083,
+        "peak_queue": 2.6
+      },
+      "runs": [
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.12771199149252938,
+          "max_wait": 0.44777437777319173,
+          "peak_queue": 2
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.21218091440923484,
+          "max_wait": 0.6801560093034447,
+          "peak_queue": 4
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.14519233341760657,
+          "max_wait": 0.4776545142899322,
+          "peak_queue": 1
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.1498383825288093,
+          "max_wait": 0.5702211641927649,
+          "peak_queue": 1
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.19568079744011385,
+          "max_wait": 0.4554002596199451,
+          "peak_queue": 3
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.1452543408294644,
+          "max_wait": 0.5710745731312596,
+          "peak_queue": 2
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.15023095980704182,
+          "max_wait": 0.47997141847112995,
+          "peak_queue": 1
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 4.0,
+          "throughput": 450.0,
+          "average_wait": 0.18678440244438851,
+          "max_wait": 0.7302682314845401,
+          "peak_queue": 4
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.20986831019937,
+          "max_wait": 1.14754764192817,
+          "peak_queue": 3
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.22185744129161994,
+          "max_wait": 1.2380163781948537,
+          "peak_queue": 3
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.2760684734256593,
+          "max_wait": 1.1525335285238525,
+          "peak_queue": 5
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.15773049609600476,
+          "max_wait": 0.6124148524252913,
+          "peak_queue": 3
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 4.0,
+          "throughput": 450.0,
+          "average_wait": 0.17362121029511518,
+          "max_wait": 0.7031235994065801,
+          "peak_queue": 4
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.1991353178093148,
+          "max_wait": 0.8859769927125543,
+          "peak_queue": 3
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.13703928885896896,
+          "max_wait": 0.3435017194846963,
+          "peak_queue": 1
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.15643062607364117,
+          "max_wait": 0.5082768972606566,
+          "peak_queue": 2
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.20396709032878882,
+          "max_wait": 0.8940653256003686,
+          "peak_queue": 2
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.25821507276817973,
+          "max_wait": 1.2838832240231193,
+          "peak_queue": 4
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.5,
+          "throughput": 514.2857142857142,
+          "average_wait": 0.15449200769967555,
+          "max_wait": 0.3591314688702917,
+          "peak_queue": 1
+        },
+        {
+          "robots": 30,
+          "capacity": 3,
+          "completion_time": 3.75,
+          "throughput": 480.0,
+          "average_wait": 0.19180918959742577,
+          "max_wait": 0.9043433699815229,
+          "peak_queue": 3
+        }
+      ]
+    },
+    {
+      "name": "At the limit",
+      "description": "100 robots, one 3-robot-wide door",
+      "settings": {
+        "robot_count": 100,
+        "door_width": 3,
+        "extra_doors": 0,
+        "variability": 0,
+        "arrival_pattern": "surge"
+      },
+      "summary": {
+        "completion_time": 8.5,
+        "throughput": 705.8823529411766,
+        "average_wait": 4.2925,
+        "max_wait": 8.5,
+        "peak_queue": 97
+      },
+      "runs": [
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        },
+        {
+          "robots": 100,
+          "capacity": 3,
+          "completion_time": 8.5,
+          "throughput": 705.8823529411766,
+          "average_wait": 4.2925,
+          "max_wait": 8.5,
+          "peak_queue": 97
+        }
+      ]
+    }
+  ]
+}
