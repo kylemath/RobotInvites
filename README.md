@@ -1,5 +1,7 @@
 # Robot Invites / Doorway Lab
 
+🚀 **[Live Demo](https://kylemath.github.io/RobotInvites)** 🚀
+
 A dependency-free Python backend and Three.js overhead frontend for exploring the robot-party doorway problem.
 
 ## Project links
