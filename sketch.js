@@ -4,6 +4,8 @@ let timer;
 let activeTab = 'door';
 let scene, camera, renderer;
 let worldKey = '';
+let simulationLog = [];
+let randomSeed = 7;
 const robotVisuals = new Map();
 const robotColors = ['#f26e4f', '#27756d', '#e0a52f', '#6576b8', '#c45d91', '#4d9b83', '#cf7548', '#6b6d73'];
 const configs = {
@@ -15,9 +17,46 @@ const configs = {
   infinite: { label: 'AT THE LIMIT / MANY ROBOTS', note: 'One 3-wide door faces a 100-robot synchronized surge, making the fixed bottleneck persistent.', config: { extra_doors: 0, door_width: 3, variability: 0, arrival_pattern: 'surge' } }
 };
 
-async function api(path, options = {}) { const response = await fetch(path, { headers: { 'Content-Type': 'application/json' }, ...options }); return response.json(); }
-async function refresh() { try { state = await api('/api/state'); updateDashboard(); document.getElementById('connection').textContent = 'connected'; } catch { document.getElementById('connection').textContent = 'offline'; } }
-async function step() { state = await api('/api/step', { method: 'POST', body: JSON.stringify({ seconds: Number(document.getElementById('speed').value) * .25 }) }); updateDashboard(); }
+function random() { randomSeed = (randomSeed * 16807) % 2147483647; return (randomSeed - 1) / 2147483646; }
+function capacity(config) { return Math.floor(config.door_width) * (config.extra_doors + 1); }
+function queueY(index) { return 1.6 + (index % 12) * 1.25; }
+function record(event) {
+  const inside = state.robots.filter(robot => robot.status === 'inside');
+  const waiting = state.robots.filter(robot => robot.status === 'waiting' && robot.arrival_time <= state.time);
+  const arrived = state.robots.filter(robot => robot.arrival_time <= state.time);
+  const waits = inside.filter(robot => robot.entered_time !== null).map(robot => robot.entered_time - robot.arrival_time);
+  const metrics = {
+    time: Number(state.time.toFixed(3)), event, inside: inside.length, waiting: waiting.length,
+    not_yet_arrived: state.config.robot_count - arrived.length,
+    throughput_per_minute: state.time ? Number((inside.length / state.time * 60).toFixed(3)) : 0,
+    average_wait: waits.length ? Number((waits.reduce((sum, wait) => sum + wait, 0) / waits.length).toFixed(3)) : 0,
+    door_capacity: capacity(state.config), utilization: Number((inside.length / state.config.robot_count).toFixed(3))
+  };
+  state.metrics = metrics; simulationLog.push(metrics);
+}
+function resetSimulation(config) {
+  randomSeed = 7; simulationLog = [];
+  state = { time: 0, running: false, config, robots: [], metrics: {}, log_length: 0 };
+  for (let robot_id = 0; robot_id < config.robot_count; robot_id += 1) {
+    const punctuality = 1 - config.variability + random() * config.variability * 2;
+    let arrival_time = robot_id * .25 * punctuality;
+    if (config.arrival_pattern === 'scheduled') arrival_time = robot_id / Math.max(1, config.robot_count - 1) * 7;
+    if (config.arrival_pattern === 'personality') arrival_time = random() * 3.5;
+    if (config.arrival_pattern === 'surge') arrival_time = 0;
+    state.robots.push({ robot_id, x: -4, y: queueY(robot_id), status: 'waiting', arrival_time, entered_time: null });
+  }
+  record('reset'); state.log_length = simulationLog.length;
+}
+function step() {
+  const seconds = Math.max(.01, Math.min(2, Number(document.getElementById('speed').value) * .25));
+  state.time += seconds;
+  const active = state.robots.filter(robot => robot.status === 'waiting' && robot.arrival_time <= state.time).sort((a, b) => a.robot_id - b.robot_id);
+  active.slice(0, capacity(state.config)).forEach(robot => {
+    robot.status = 'inside'; robot.entered_time = state.time; robot.x = 0; robot.y = .25 + (robot.robot_id % 10) * 1.2;
+  });
+  state.robots.forEach(robot => { if (robot.status === 'waiting') robot.x = Math.min(-4 + Math.max(0, state.time - robot.arrival_time) * .55, -1); });
+  record('step'); state.log_length = simulationLog.length; updateDashboard();
+}
 function updateDashboard() {
   if (!state) return;
   const metrics = state.metrics || {};
@@ -27,14 +66,14 @@ function updateDashboard() {
   document.getElementById('queue').textContent = metrics.waiting || 0;
   document.getElementById('clock').textContent = `T+ ${formatTime(state.time)}`;
   document.getElementById('event').textContent = metrics.event || 'ready';
-  api('/api/log').then(data => { const recent = data.rows.slice(-28); const max = Math.max(1, ...recent.map(row => row.waiting)); document.getElementById('chart').innerHTML = recent.map(row => `<i class="bar" style="height:${Math.max(2, row.waiting / max * 100)}%" title="${row.waiting} waiting at ${row.time}s"></i>`).join(''); });
+  const recent = simulationLog.slice(-28); const max = Math.max(1, ...recent.map(row => row.waiting)); document.getElementById('chart').innerHTML = recent.map(row => `<i class="bar" style="height:${Math.max(2, row.waiting / max * 100)}%" title="${row.waiting} waiting at ${row.time}s"></i>`).join('');
 }
 function formatTime(seconds) { const mins = Math.floor(seconds / 60).toString().padStart(2, '0'); const secs = Math.floor(seconds % 60).toString().padStart(2, '0'); return `${mins}:${secs}`; }
 function togglePlay() { playing = !playing; const button = document.getElementById('play'); button.innerHTML = playing ? 'Ⅱ <span>Pause</span>' : '▶ <span>Run</span>'; if (playing) timer = setInterval(step, 160); else clearInterval(timer); }
-async function chooseTab(tab) {
+function chooseTab(tab) {
   activeTab = tab; worldKey = ''; document.querySelectorAll('.tab').forEach(button => button.classList.toggle('active', button.dataset.tab === tab));
   const choice = configs[tab]; document.getElementById('scenario-label').textContent = choice.label; document.getElementById('scenario-note').textContent = choice.note;
-  if (playing) togglePlay(); state = await api('/api/reset', { method: 'POST', body: JSON.stringify({ ...choice.config, robot_count: tab === 'infinite' ? 100 : 30 }) }); robotVisuals.clear(); updateDashboard();
+  if (playing) togglePlay(); resetSimulation({ ...choice.config, robot_count: tab === 'infinite' ? 100 : 30 }); robotVisuals.clear(); updateDashboard();
 }
 
 function material(color, roughness = .7) { return new THREE.MeshStandardMaterial({ color, roughness, metalness: .08 }); }
@@ -67,5 +106,5 @@ function renderRobots(config) {
   robotVisuals.forEach((visual, id) => { if (!active.has(id)) { scene.remove(visual.group); robotVisuals.delete(id); } });
 }
 function animate() { requestAnimationFrame(animate); if (state) { const nextWorldKey = JSON.stringify(state.config); if (nextWorldKey !== worldKey) { drawWorld(state.config); worldKey = nextWorldKey; } renderRobots(state.config); } renderer.render(scene, camera); }
-function setup() { setupScene(); document.getElementById('play').addEventListener('click', togglePlay); document.getElementById('step').addEventListener('click', step); document.getElementById('reset').addEventListener('click', () => chooseTab(activeTab)); document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => chooseTab(button.dataset.tab))); chooseTab('door'); setInterval(refresh, 900); }
+function setup() { setupScene(); document.getElementById('play').addEventListener('click', togglePlay); document.getElementById('step').addEventListener('click', step); document.getElementById('reset').addEventListener('click', () => chooseTab(activeTab)); document.querySelectorAll('.tab').forEach(button => button.addEventListener('click', () => chooseTab(button.dataset.tab))); chooseTab('door'); document.getElementById('connection').textContent = 'local'; }
 window.addEventListener('load', setup);
